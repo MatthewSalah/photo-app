@@ -48,3 +48,21 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2109)
 
 
+Started GET "/" for ::1 at 2024-09-09 06:32:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 3608)
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 9684)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:32:27 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 987)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1323)
+
+
