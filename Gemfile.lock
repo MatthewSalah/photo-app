@@ -83,6 +83,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    childprocess (5.1.0)
+      logger (~> 1.5)
     commonjs (0.2.7)
     concurrent-ruby (1.3.4)
     crass (1.0.6)
@@ -114,12 +116,17 @@ GEM
     jbuilder (2.12.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (3.0.1)
+      addressable (~> 2.8)
+      childprocess (~> 5.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
     less-rails (4.0.0)
       actionpack (>= 4)
       less (~> 2.6.0)
       sprockets (>= 2)
+    letter_opener (1.10.0)
+      launchy (>= 2.2, < 4)
     libv8-node (18.19.0.0-arm64-darwin)
     logger (1.6.1)
     loofah (2.22.0)
@@ -262,6 +269,7 @@ DEPENDENCIES
   devise-bootstrap-views
   importmap-rails
   jbuilder
+  letter_opener
   mini_racer
   pg
   puma (~> 5.0)

@@ -81,3 +81,329 @@ Migrating to DeviseCreateUsers (20240909093423)
   [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-09-09 09:36:56.028559"], ["updated_at", "2024-09-09 09:36:56.028559"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-09-09 06:37:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3656)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 8922)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:38:24 -0300
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 2064)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:38:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 966)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4696)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 7052)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 17466)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:38:31 -0300
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 496)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:38:31 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 237)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1964)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 2814)
+
+
+Started GET "/users/password/new" for ::1 at 2024-09-09 06:38:38 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/passwords/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 318)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/passwords/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1520)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2275)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3808)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 06:38:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 194)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2005)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2757)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4301)
+
+
+Started GET "/users/confirmation/new" for ::1 at 2024-09-09 06:38:40 -0300
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/confirmations/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 262)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/confirmations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1779)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2534)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3613)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:38:40 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 237)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1948)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2784)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 06:38:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1891)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+Started GET "/users/password/new" for ::1 at 2024-09-09 06:38:41 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/passwords/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/passwords/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 867)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2215)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 06:38:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1891)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2614)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:38:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 237)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1315)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1943)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2709)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:39:22 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 272)
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1600)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 3950)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 8771)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:39:24 -0300
+  
+SyntaxError (/Users/watzan/Documents/GitHub/photo-app/app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+  skip_before_action: authenticate_user!, only: [:...
+                    ^
+):
+  
+app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+Started GET "/" for ::1 at 2024-09-09 06:39:25 -0300
+  
+SyntaxError (/Users/watzan/Documents/GitHub/photo-app/app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+  skip_before_action: authenticate_user!, only: [:...
+                    ^
+):
+  
+app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/welcome_controller.rb:2: syntax error, unexpected ':', expecting `end'
+Started GET "/" for ::1 at 2024-09-09 06:39:46 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 2746)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3483)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:44:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4297)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 10201)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2024-09-09 06:48:14 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2685)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2974)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2024-09-09 06:48:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4300)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 9276)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2024-09-09 06:49:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 206.4ms | Allocations: 91264)
+Completed 200 OK in 215ms (Views: 208.2ms | ActiveRecord: 0.0ms | Allocations: 96303)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:50:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5748)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 6787)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <!-- <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %> -->
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2024-09-09 06:50:46 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2149)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3151)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:51:32 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1349)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1647)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:51:33 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1349)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1626)
+
+
+Started GET "/" for ::1 at 2024-09-09 06:51:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2092)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7123)
+
+
+Started GET "/path1" for ::1 at 2024-09-09 06:51:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-09-09 06:54:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 971)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4763)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5902)
+Completed 200 OK in 58ms (Views: 39.8ms | ActiveRecord: 0.5ms | Allocations: 20078)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 06:54:18 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2068)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2724)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4250)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 06:57:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 843)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 4461)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5623)
+Completed 200 OK in 68ms (Views: 39.3ms | ActiveRecord: 0.5ms | Allocations: 19529)
+
+
