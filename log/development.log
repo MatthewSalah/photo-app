@@ -30,3 +30,12 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3318)
 
 
+Started GET "/" for ::1 at 2024-09-09 06:14:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 43309)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.0ms | Allocations: 47541)
+
+
