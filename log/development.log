@@ -1,0 +1,32 @@
+Started GET "/" for ::1 at 2024-09-09 05:45:48 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.0ms | Allocations: 634)
+Completed 200 OK in 49ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 7116)
+
+
+Started GET "/" for ::1 at 2024-09-09 05:54:02 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 526)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4512)
+
+
+Started GET "/" for ::1 at 2024-09-09 05:54:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 172.7ms | Allocations: 84275)
+Completed 200 OK in 177ms (Views: 176.9ms | ActiveRecord: 0.0ms | Allocations: 85417)
+
+
+Started GET "/" for ::1 at 2024-09-09 05:54:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2376)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3318)
+
+
