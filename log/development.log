@@ -1139,3 +1139,276 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 2308)
 
 
+Started GET "/" for ::1 at 2024-09-09 07:48:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1831)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 2105)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-09 07:51:10 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Logout"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:9000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.1ms | Allocations: 1965)
+
+
+Started GET "/" for ::1 at 2024-09-09 07:51:10 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 960)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1234)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 07:51:12 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 692)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2450)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3160)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 4323)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 07:51:14 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 245)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2328)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3133)
+
+
+Started POST "/users" for ::1 at 2024-09-09 07:51:23 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"MatthewjSalah@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matthewjsalah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "matthewjsalah@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-09 10:51:23.547230"], ["unconfirmed_email", nil], ["created_at", "2024-09-09 10:51:23.547163"], ["updated_at", "2024-09-09 10:51:23.547163"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-4.9.4/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/watzan/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/devise-4.9.4/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 0.5ms | Allocations: 382)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 4.9ms
+Delivered mail 66ded32b93d06_37144038357de@watzans-MBP.mail (17.6ms)
+Date: Mon, 09 Sep 2024 07:51:23 -0300
+From: no-reply@photoapp.com
+Reply-To: no-reply@photoapp.com
+To: matthewjsalah@gmail.com
+Message-ID: <66ded32b93d06_37144038357de@watzans-MBP.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome matthewjsalah@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:9000/users/confirmation?confirmation_token=JWrQWiPD5UwzCHyqgyvo">Confirm my account</a></p>
+
+Redirected to http://localhost:9000/
+Completed 303 See Other in 355ms (ActiveRecord: 1.8ms | Allocations: 44607)
+
+
+Started GET "/" for ::1 at 2024-09-09 07:51:23 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1085)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1382)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for ::1 at 2024-09-09 07:51:51 -0300
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2024-09-09 10:51:51.370846"], ["updated_at", "2024-09-09 10:51:51.371082"], ["id", 2]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:9000/users/sign_in
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms | Allocations: 5515)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 07:51:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1395)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2087)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2868)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-09 07:51:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 237)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1315)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1904)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-09-09 07:52:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"MatthewjSalah@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matthewjsalah@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:9000/
+Completed 303 See Other in 253ms (ActiveRecord: 0.1ms | Allocations: 2615)
+
+
+Started GET "/" for ::1 at 2024-09-09 07:52:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1950)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2223)
+
+
+Started GET "/" for ::1 at 2024-09-09 07:52:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1834)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 2107)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:29:27 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:1
+  Rendered welcome/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3279)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 3.1ms | Allocations: 4275)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:29:35 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:1
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1871)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2165)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:30:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:1
+  Rendered welcome/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 11854)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 13724)
+Completed 200 OK in 44ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 18746)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:30:51 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:1
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2151)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 2487)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-09 09:30:56 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Logout"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:9000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 3641)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:30:56 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1265)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1587)
+
+
+Started GET "/meeting.png" for ::1 at 2024-09-09 09:30:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/meeting.png"):
+  
+Started GET "/" for ::1 at 2024-09-09 09:31:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1097)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1409)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:31:02 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 397)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 975)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1252)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:31:45 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1964)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2938)
+
+
+Started GET "/" for ::1 at 2024-09-09 09:32:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2705)
+Completed 200 OK in 36ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 7729)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 09:32:16 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 833)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4168)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4896)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 14420)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-09 09:32:18 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1868)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2620)
+
+
