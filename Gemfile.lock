@@ -99,6 +99,10 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-bootstrap-views (1.1.0)
+    dotenv (3.1.2)
+    dotenv-rails (3.1.2)
+      dotenv (= 3.1.2)
+      railties (>= 6.1)
     erubi (1.13.0)
     execjs (2.9.1)
     ffi (1.17.0-arm64-darwin)
@@ -278,6 +282,7 @@ DEPENDENCIES
   debug
   devise
   devise-bootstrap-views
+  dotenv-rails
   importmap-rails
   jbuilder
   letter_opener

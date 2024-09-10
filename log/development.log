@@ -2054,3 +2054,384 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 8553)
 
 
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:35:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 839)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 7117)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 8631)
+Completed 200 OK in 26ms (Views: 16.9ms | ActiveRecord: 0.4ms | Allocations: 22293)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:35:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1624)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2563)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:35:44 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2640)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3329)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 4085)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:36:56 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"999", "card_expires_month"=>"6", "card_expires_year"=>"2032"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:36:56.331201"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:36:56.331118"], ["updated_at", "2024-09-10 08:36:56.331118"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 172)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2863)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3657)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 324ms (Views: 3.1ms | ActiveRecord: 2.2ms | Allocations: 21870)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:39:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"999", "card_expires_month"=>"6", "card_expires_year"=>"2032"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:39:07.459490"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:39:07.459427"], ["updated_at", "2024-09-10 08:39:07.459427"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 839)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 6348)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 7885)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 302ms (Views: 16.9ms | ActiveRecord: 1.6ms | Allocations: 38321)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:39:24 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"2", "card_expires_year"=>"2028"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:39:24.896983"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:39:24.896941"], ["updated_at", "2024-09-10 08:39:24.896941"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 172)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2691)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 3468)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 291ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 9312)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:39:29 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"2", "card_expires_year"=>"2028"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:39:29.944074"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:39:29.944030"], ["updated_at", "2024-09-10 08:39:29.944030"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2554)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 3301)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 295ms (Views: 2.2ms | ActiveRecord: 0.9ms | Allocations: 8699)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:39:30 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2690)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3496)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 4419)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:39:31 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1625)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2563)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:39:33 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2641)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3331)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4078)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:39:35 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2530)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3219)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3935)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:39:49 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"4", "card_expires_year"=>"2033"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:39:49.545713"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:39:49.545670"], ["updated_at", "2024-09-10 08:39:49.545670"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2554)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 3301)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 291ms (Views: 2.1ms | ActiveRecord: 0.9ms | Allocations: 8900)
+
+
+[dotenv] Set [36mSTRIPE_TEST_PUBLISHABLE_KEY[0m and [36mSTRIPE_TEST_SECRET_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mSTRIPE_TEST_PUBLISHABLE_KEY[0m and [36mSTRIPE_TEST_SECRET_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/users" for ::1 at 2024-09-10 05:45:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"4", "card_expires_year"=>"2033"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:45:22.823395"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:45:22.823326"], ["updated_at", "2024-09-10 08:45:22.823326"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 839)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 6308)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7844)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 1644ms (Views: 32.5ms | ActiveRecord: 2.3ms | Allocations: 42716)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:45:25 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2693)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3500)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 4468)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:45:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 803)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1616)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2554)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:45:27 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2643)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3333)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4101)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:45:51 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"5", "card_expires_year"=>"2032"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:45:51.291788"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:45:51.291754"], ["updated_at", "2024-09-10 08:45:51.291754"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2555)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 3302)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 1026ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 12027)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:46:56 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4242424242424242", "card_cvv"=>"111", "card_expires_month"=>"5", "card_expires_year"=>"2032"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:46:57.259543"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:46:57.259504"], ["updated_at", "2024-09-10 08:46:57.259504"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2555)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 3301)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 1053ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 11953)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:46:58 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1208)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 1488)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:47:00 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2532)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3221)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3943)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:47:38 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4012888888881881", "card_cvv"=>"111", "card_expires_month"=>"2", "card_expires_year"=>"2031"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:47:38.868897"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:47:38.868833"], ["updated_at", "2024-09-10 08:47:38.868833"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2556)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3302)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 1056ms (Views: 2.4ms | ActiveRecord: 1.0ms | Allocations: 11762)
+
+
+Started POST "/users" for ::1 at 2024-09-10 05:47:47 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"4012888888881881", "card_cvv"=>"111", "card_expires_month"=>"2", "card_expires_year"=>"2031"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-09-10 08:47:47.458910"], ["unconfirmed_email", nil], ["created_at", "2024-09-10 08:47:47.458876"], ["updated_at", "2024-09-10 08:47:47.458876"]]
+  ↳ app/controllers/registrations_controller.rb:6:in `block in create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12:in `block in create'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/registrations_controller.rb:20:in `rescue in block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2555)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3301)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 1188ms (Views: 8.0ms | ActiveRecord: 2.0ms | Allocations: 11874)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:47:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 437)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1181)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 1458)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-10 05:47:49 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2533)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3222)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3942)
+
+
+Started GET "/" for ::1 at 2024-09-10 05:47:50 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 421)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1090)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1367)
+
+
